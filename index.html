@@ -141,10 +141,10 @@ $("hola").textContent=S.n?"Hola, "+S.n+". Llevas "+L.filter(function(x){return x
 $("nombre").value=S.n;$("nombre").oninput=function(){S.n=this.value.trim();save()};
 /* 1 simulador */
 var T=[["1:30 p. m. · Suena el timbre de ingreso",["Me quedo afuera con mis amigos un ratito más",[-8,-4,-3],"Entraste tarde al colegio"],["Entro de inmediato a mi aula",[8,3,4],"Entraste a tiempo al colegio"]],
-["1:45 p. m. · El docente ya empezó la clase",["Entro haciendo ruido",[-10,-6,-5],"Entraste al aula haciendo ruido"],["Entro en silencio y saludo",[6,6,5],"Entraste en silencio y saludaste"]],
-["2:40 p. m. · Clase. Vibra tu celular",["Reviso los mensajes",[-12,-3,-4],"Usaste el celular en clase"],["Lo dejo guardado",[8,2,4],"Guardaste el celular"]],
-["3:50 p. m. · Terminó el recreo",["Vuelvo diez minutos después",[-10,-5,-6],"Volviste tarde del recreo"],["Vuelvo con el timbre",[6,3,3],"Volviste con el timbre"]],
-["4:40 p. m. · Un compañero no entiende",["Me río de él",[-4,-12,-8],"Te reíste de un compañero"],["Le explico con calma",[5,10,8],"Le explicaste a un compañero"]],
+["1:50 p. m. · El docente ya empezó la clase",["Entro haciendo ruido",[-10,-6,-5],"Entraste al aula haciendo ruido"],["Entro en silencio y saludo",[6,6,5],"Entraste en silencio y saludaste"]],
+["3:35 p. m. · Clase. Vibra tu celular",["Reviso los mensajes",[-12,-3,-4],"Usaste el celular en clase"],["Lo dejo guardado",[8,2,4],"Guardaste el celular"]],
+["4:30 p. m. · Terminó el recreo",["Vuelvo diez minutos después",[-10,-5,-6],"Volviste tarde del recreo"],["Vuelvo con el timbre",[6,3,3],"Volviste con el timbre"]],
+["5:00 p. m. · Un compañero no entiende",["Me río de él",[-4,-12,-8],"Te reíste de un compañero"],["Le explico con calma",[5,10,8],"Le explicaste a un compañero"]],
 ["5:35 p. m. · Faltan 15 minutos para la salida y hay una mesa rayada",["Me voy; no es mi problema",[0,-8,-3],"Ignoraste la mesa rayada"],["Propongo limpiarla juntos",[2,10,6],"Propusiste limpiar la mesa"]]];
 var M,step,log;
 function cl(v){return Math.max(0,Math.min(100,v))}
