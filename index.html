@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cumplo porque comprendo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef8ef;--surf:#fafffa;--ink:#0f2e17;--mut:#3f6b4c;--line:#c3e3c9;--mag:#1b7f3b;--teal:#14612d;--sun:#8fd14f;--ok:#0b6b3a;--bad:#c2410c;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c2414;--surf:#12341d;--ink:#e9fbec;--mut:#a9d9b4;--line:#25583a;--mag:#6fe08f;--teal:#8ff0a8;--sun:#a6e86b;--ok:#7ee8a5;--bad:#ff9a5c;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0c2414;--surf:#12341d;--ink:#e9fbec;--mut:#a9d9b4;--line:#25583a;--mag:#6fe08f;--teal:#8ff0a8;--sun:#a6e86b;--ok:#7ee8a5;--bad:#ff9a5c;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+*{box-sizing:border-box}
+body{margin:0;background-color:var(--bg);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cg fill='%2340a060' fill-opacity='.15'%3E%3Cpath transform='translate(14 34) rotate(-35)' d='M0 0C12-14 30-14 42 0C30 14 12 14 0 0Z'/%3E%3Cpath transform='translate(92 24) rotate(30) scale(.8)' d='M0 0C12-14 30-14 42 0C30 14 12 14 0 0Z'/%3E%3Crect x='66' y='74' width='8' height='8' transform='rotate(45 70 78)'/%3E%3Cpath transform='translate(98 106) rotate(-30)' d='M0 0C12-14 30-14 42 0C30 14 12 14 0 0Z'/%3E%3Crect x='24' y='106' width='6' height='6' transform='rotate(45 27 109)'/%3E%3Cpath transform='translate(48 128) rotate(40) scale(.7)' d='M0 0C12-14 30-14 42 0C30 14 12 14 0 0Z'/%3E%3C/g%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cg fill='%238fd14f' fill-opacity='.16'%3E%3Cpath transform='translate(40 70) rotate(-30) scale(2)' d='M0 0C12-14 30-14 42 0C30 14 12 14 0 0Z'/%3E%3Cpath transform='translate(190 150) rotate(35) scale(2.4)' d='M0 0C12-14 30-14 42 0C30 14 12 14 0 0Z'/%3E%3Cpath transform='translate(90 250) rotate(-70) scale(1.8)' d='M0 0C12-14 30-14 42 0C30 14 12 14 0 0Z'/%3E%3Crect x='230' y='40' width='16' height='16' transform='rotate(45 238 48)'/%3E%3C/g%3E%3C/svg%3E");color:var(--ink);font:400 1.05rem/1.55 "Source Sans 3",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+.wrap{max-width:760px;margin:0 auto;padding:0 1.1rem}
+header{background:repeating-linear-gradient(90deg,var(--mag) 0 28px,var(--sun) 28px 56px) top/100% 10px no-repeat;padding:2.2rem 0 1.4rem}
+h1{font-size:clamp(1.9rem,7vw,3.2rem);font-weight:800;letter-spacing:-.02em}
+.lead{color:var(--mut);max-width:52ch;margin:.8rem 0 1rem}
+input[type=text],textarea,select{width:100%;font:inherit;color:var(--ink);background:var(--surf);border:2px solid var(--line);border-radius:10px;padding:.6rem .8rem}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.badges{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.8rem;margin-top:.4rem}
+.b{padding:.3rem .7rem;border-radius:999px;border:2px dashed var(--line);color:var(--mut);font-size:.9rem}
+.b.on{border:2px solid var(--sun);background:var(--sun);color:#1d1b33;font-weight:600}
+section{padding:2rem 0;border-top:2px solid var(--line)}
+h2{font-size:1.7rem;margin-bottom:.4rem}
+.sub{color:var(--mut);margin:0 0 1.1rem}
+button{font:inherit;cursor:pointer;color:var(--ink);background:var(--surf);border:2px solid var(--line);border-radius:10px;padding:.6rem .9rem;text-align:left}
+button:hover{border-color:var(--teal)}
+.go{background:var(--mag);color:#fff;border-color:var(--mag);font-weight:600;text-align:center}
+.room{display:grid;grid-template-columns:repeat(6,1fr);gap:.45rem;margin:.8rem 0}
+.desk{aspect-ratio:1;border-radius:12px;display:grid;place-items:center;font-size:1.5rem;background:var(--line);transition:background .5s,transform .5s;filter:grayscale(1);opacity:.6}
+.desk.on{background:color-mix(in srgb,var(--teal) 30%,var(--surf));filter:none;opacity:1;transform:scale(1.04)}
+.m{display:grid;grid-template-columns:7.5rem 1fr 2.4rem;gap:.5rem;align-items:center;font-size:.95rem;margin:.25rem 0}
+.bar{height:12px;background:var(--line);border-radius:6px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--mag));transition:width .6s}
+.scene{background:var(--surf);border-left:6px solid var(--mag);padding:1rem 1.1rem;border-radius:4px 14px 14px 4px;margin:.8rem 0}
+.scene b{display:block;font-size:1.1rem}
+.two{display:grid;gap:.5rem;margin-top:.7rem}
+.log{margin:.6rem 0;padding:0;list-style:none}
+.log li{padding:.35rem .6rem;border-radius:8px;margin:.25rem 0;background:var(--surf)}
+.log .y{border-left:5px solid var(--ok)}.log .n{border-left:5px solid var(--bad)}
+.chain{display:grid;gap:.5rem;margin:.8rem 0}
+.chain div{background:var(--surf);border-radius:12px;padding:.6rem .9rem;border-left:6px solid var(--bad);opacity:0;transform:translateY(8px);transition:opacity .5s,transform .5s}
+.chain.good div{border-left-color:var(--ok)}
+.chain div.show{opacity:1;transform:none}
+.pick{display:flex;flex-wrap:wrap;gap:.5rem}
+.pick button[aria-pressed=true]{border-color:var(--mag);background:color-mix(in srgb,var(--mag) 14%,var(--surf))}
+.reg{display:grid;grid-template-columns:1fr auto auto;gap:.5rem;align-items:center;margin:.55rem 0}
+.reg .st{grid-column:1/-1}
+.st .bar{display:flex}.st .bar i{width:0;background:var(--ok);transition:width .5s}.st .bar u{display:block;height:100%;background:var(--bad);transition:width .5s}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:.4rem;margin:.8rem 0}
+.days button{text-align:center;padding:.5rem 0}
+.days button[aria-pressed=true]{background:var(--ok);border-color:var(--ok);color:#fff}
+textarea{resize:vertical}
+header{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='120'%3E%3Cg fill='%23ffffff' fill-opacity='.11'%3E%3Cpath transform='translate(20 32) rotate(-30)' d='M0 0C12-14 30-14 42 0C30 14 12 14 0 0Z'/%3E%3Cpath transform='translate(112 22) rotate(25) scale(.8)' d='M0 0C12-14 30-14 42 0C30 14 12 14 0 0Z'/%3E%3Cpath transform='translate(66 92) rotate(-10) scale(1.2)' d='M0 0C12-14 30-14 42 0C30 14 12 14 0 0Z'/%3E%3Crect x='150' y='76' width='8' height='8' transform='rotate(45 154 80)'/%3E%3C/g%3E%3C/svg%3E"),linear-gradient(180deg,#1b7f3b,#0d4a22);color:#fff}header .lead,header .sub{color:#e3ffe9}header .school{color:#b6f07a}header .b{border-color:#a9e8b9;color:#e3ffe9}header .b.on{color:#1d1b33}footer{background:rgba(27,127,59,.08)}.scene b,.poster h3{color:var(--mag)}
+.brand{display:flex;gap:1.1rem;align-items:center;margin-bottom:.4rem}.brand img{width:104px;height:104px;border-radius:14px;flex:none;box-shadow:0 6px 18px rgba(27,127,59,.4);border:3px solid var(--sun)}.school{font:600 .8rem/1.3 "Bricolage Grotesque",system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--mag);margin-bottom:.3rem}h2::before{content:"◆ ";color:var(--sun)}section{border-top:3px double var(--sun)}
+.poster{background:var(--surf);border:3px dashed var(--mag);border-radius:14px;padding:1rem 1.2rem;margin:.8rem 0}.poster h3{margin-bottom:.5rem}.poster li{margin:.35rem 0}.poster #fr{font-weight:600;color:var(--ok);margin:.6rem 0 0}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+.bi .b{display:inline-block}.bi small{display:block;margin-top:.3rem;color:#e3ffe9;font-size:.85rem;line-height:1.35}
+.reg button[aria-pressed=true]{border-color:var(--mag);background:color-mix(in srgb,var(--mag) 14%,var(--surf));opacity:1}
+.cov{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0}
+.pli{display:flex;justify-content:space-between;align-items:center;gap:.6rem}.pli button{padding:.15rem .6rem;flex:none}
+.step{font-weight:600;margin:1rem 0 .4rem;color:var(--mut)}
+.fin{background:rgba(255,255,255,.14);border:2px solid #a6e86b;border-radius:12px;padding:.55rem .85rem;margin:.7rem 0 0;font-weight:600}
+.sgp{margin:.8rem 0;background:var(--surf);border:2px solid var(--line);border-radius:14px;padding:.9rem}.sgp canvas{display:block;width:100%;height:auto;aspect-ratio:10/3;background:#fff;border:2px dashed var(--mag);border-radius:10px;touch-action:none;cursor:crosshair}.sgp .row{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.6rem}
+.sig{display:block;max-width:260px;width:100%;background:#fff;border-radius:8px;border:2px solid var(--line);margin:.4rem 0}
+.toasts{position:fixed;left:0;right:0;bottom:calc(1rem + env(safe-area-inset-bottom,0px));display:grid;justify-items:center;gap:.5rem;padding:0 1rem;z-index:50;pointer-events:none}
+.toast{pointer-events:auto;cursor:pointer;max-width:460px;background:#0d4a22;color:#fff;border:2px solid #a6e86b;border-radius:14px;padding:.7rem 1rem;box-shadow:0 8px 24px rgba(0,0,0,.3);animation:pop .3s}
+@keyframes pop{from{transform:translateY(14px);opacity:0}to{transform:none;opacity:1}}
+button:disabled{opacity:.5;cursor:not-allowed}button:disabled:hover{border-color:var(--line)}
+.days button:disabled[aria-pressed=true]{opacity:1}
+.lock{background:var(--surf);border:2px dashed var(--sun);border-radius:10px;padding:.5rem .8rem;margin:.6rem 0;font-size:.95rem}
+.deco{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.deco span{position:absolute;font-size:3rem;opacity:.17;animation:flot 9s ease-in-out infinite}
+.deco span:nth-child(1){top:16%;left:2%;rotate:-20deg}.deco span:nth-child(2){top:30%;right:3%;rotate:25deg;animation-delay:-2s}.deco span:nth-child(3){top:52%;left:4%;rotate:10deg;animation-delay:-4s}.deco span:nth-child(4){top:64%;right:5%;rotate:-15deg;animation-delay:-1s}.deco span:nth-child(5){top:80%;left:8%;rotate:30deg;animation-delay:-5s}.deco span:nth-child(6){top:90%;right:10%;rotate:-25deg;animation-delay:-3s}.deco span:nth-child(7){top:42%;right:12%;rotate:15deg;animation-delay:-6s}.deco span:nth-child(8){top:72%;left:42%;rotate:-10deg;animation-delay:-7s}
+@keyframes flot{0%,100%{translate:0 0}50%{translate:0 -14px}}
+header,main,footer{position:relative;z-index:1}
+@media (max-width:600px){.deco span{font-size:2.2rem}}
+footer{padding:1.6rem 0 2.4rem;color:var(--mut);font-size:.92rem;border-top:2px solid var(--line)}
+
+.reg-box details{background:var(--surf);border:2px solid var(--line);border-left:6px solid var(--mag);border-radius:4px 14px 14px 4px;margin:.6rem 0;padding:0}
+.reg-box summary{cursor:pointer;padding:.75rem 1rem;font:800 1.1rem/1.2 "Bricolage Grotesque",system-ui,sans-serif;color:var(--mag);list-style-position:inside}
+.reg-box summary:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.reg-box details[open] summary{border-bottom:2px dashed var(--line)}
+.reg-box .in{padding:.4rem 1rem 1rem}
+.reg-box h4{font:600 1rem/1.3 "Bricolage Grotesque",system-ui,sans-serif;color:var(--teal);margin:1rem 0 .3rem;text-transform:uppercase;letter-spacing:.04em}
+.reg-box p{margin:.35rem 0}.reg-box ul{margin:.3rem 0;padding-left:1.2rem}.reg-box li{margin:.3rem 0}
+.reg-box .tag{display:inline-block;background:var(--sun);color:#1d1b33;border-radius:999px;padding:0 .6rem;font-weight:600;font-size:.9rem;margin-right:.3rem}
+.reg-box .part{font:800 1.35rem/1.2 "Bricolage Grotesque",system-ui,sans-serif;margin:1.6rem 0 .2rem;color:var(--ink)}
+.reg-box .part::before{content:"◆ ";color:var(--sun)}
+.reg-box .sign{background:var(--surf);border:3px dashed var(--mag);border-radius:14px;padding:1rem 1.2rem;margin:1.2rem 0 0}
+.rlink{display:inline-block;margin:.2rem 0 0;color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.acl{display:grid;gap:.5rem;margin:.8rem 0}.acl button[aria-pressed=true]{border-color:var(--mag);background:color-mix(in srgb,var(--mag) 14%,var(--surf))}
+.acs{display:grid;gap:.5rem;margin:.8rem 0}
+.reg-outer>summary{font-size:1.3rem}.reg-outer>.in{padding-top:.2rem}
+</style>
+</head>
+<body>
+<div class="deco" aria-hidden="true"><span>🌿</span><span>🍃</span><span>📚</span><span>✏️</span><span>🌱</span><span>⭐</span><span>🍀</span><span>🎒</span></div>
+<header><div class="wrap">
+<div class="brand"><img src="data:image/jpeg;base64,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" alt="Escudo de la U.E.T.H. José Alonso de Ibáñez “B”" width="104" height="104"><div><div class="school">U.E.T.H. José Alonso de Ibáñez “B” · 1969–2026</div><h1>Cumplo porque comprendo</h1></div></div>
+<p class="lead">Actividades para ver, en vivo, cómo tus acciones cambian el aula de nuestra unidad educativa José Alonso de Ibáñez “B”. Tú decides; la página te muestra qué pasa.</p>
+<input type="text" id="nombre" maxlength="30" autocomplete="off" aria-label="Tu nombre o apodo" placeholder="Tu nombre o apodo">
+<p id="hola" class="sub" style="margin:.6rem 0 0"></p>
+<a class="rlink" href="#reglamento">Ir al reglamento ↓</a>
+<p class="fin" id="fin" hidden></p>
+<p class="sub" style="margin:1.1rem 0 .2rem">Tus insignias y cómo ganar cada una:</p>
+<div class="badges" id="badges"></div>
+</div></header>
+<main class="wrap">
+<section id="reglamento" class="reg-box" style="padding-top:1.2rem"><details class="reg-outer"><summary>📖 Reglamento: lo que debo conocer</summary><div class="in">
+<p class="sub">Resumen del Acta de Compromiso de Estudiante, Madre y Padre de Familia. Se basa en el Reglamento Disciplinario Interno y en el Plan de Convivencia Pacífica y Armónica de la U.E.T.H. José Alonso de Ibáñez “B”. Su objetivo es garantizar el desarrollo integral de los estudiantes, la convivencia pacífica, la armonía, el respeto, la tolerancia y una cultura de paz. Léelo con calma: en la actividad 5 podrás aceptar tus compromisos y firmar el acta. Toca cada título para abrirlo.</p>
+
+<p class="part">Deberes de los estudiantes</p>
+
+<details><summary>1. Asistencia y puntualidad</summary><div class="in">
+<p>Es obligación del estudiante asistir con puntualidad en el horario establecido de ingreso y salida.</p>
+<ul>
+<li><b>Lunes:</b> ingreso a las 13:10 para participar desde el inicio en el saludo a la bandera, que empieza a las 13:15, para fortalecer la cultura general, el espíritu cívico y la identidad alonseña.</li>
+<li><b>Martes a viernes:</b> ingreso a las 13:20; a las 13:30 empieza la actividad educativa en el aula y el estudiante debe estar en clases.</li>
+<li>Los atrasos se registran. Si se repiten, se comunica a madres, padres o apoderados mediante memorándum para corregir el incumplimiento.</li>
+</ul></div></details>
+
+<details><summary>2. Uniforme</summary><div class="in">
+<p>El estudiante alonseño debe vestir con la debida pulcritud el siguiente uniforme:</p>
+<ul>
+<li><b>Lunes:</b> traje azul noche, camisa blanca, corbata de la Unidad Educativa, calzados negros de vestir muy bien lustrados y su pañuelo.</li>
+<li><b>Martes a viernes:</b> chamarra azul del Colegio, camisa blanca y corbata del Colegio, pantalón azul de tela y calzados negros escolares bien lustrados.</li>
+<li><b>Educación Física</b> (según el horario del estudiante): deportivo, polera, corto del Colegio y zapatillas deportivas.</li>
+</ul></div></details>
+
+<details><summary>3. Presentación personal</summary><div class="in">
+<p>El estudiante debe asistir a clases debidamente aseado y con el uniforme correspondiente, con el cabello limpio, recortado y bien peinado, con corte colegial. Se prohíbe teñir el cabello y los cortes o peinados extravagantes.</p></div></details>
+
+<details><summary>4. Materiales educativos</summary><div class="in"><ul>
+<li>El estudiante debe presentarse con todos los materiales para toda la jornada.</li>
+<li>Es su deber evitar olvidos y preparar su mochila con anticipación, según su horario de clases.</li>
+<li>Queda prohibido retornar o salir de la Unidad Educativa por no haber traído algún material, y salir del aula o del colegio para fotocopiar o comprar material. Secretaría no recibe materiales y los señores regentes no los reciben en la puerta (cuadernos u otros).</li>
+</ul></div></details>
+
+<details><summary>5. Deberes educativos</summary><div class="in">
+<h4>Asistencia al proceso educativo</h4>
+<p>Es deber y obligación asistir a clases de todas las áreas humanísticas, científicas y técnicas, con puntualidad, en el horario de 13:20 a 17:50 y con séptima hora hasta las 18:20.</p>
+<p>Los estudiantes de 3°, 4°, 5° y 6° de secundaria deben asistir obligatoriamente, según el Reglamento BTH, al horario de su especialidad en la mañana en el Núcleo Tecnológico Industrial Pichincha.</p>
+<h4>Puntualidad y responsabilidad</h4>
+<p>Presentar con responsabilidad y puntualidad, en todas las áreas de saberes, los trabajos asignados: cuadernos, tareas, trabajos de investigación, trabajos prácticos, cuestionarios y otros que pidan los maestros. También asistir puntualmente a las evaluaciones (exámenes) señaladas.</p>
+<h4>De la disciplina</h4>
+<ul>
+<li>Demostrar, dentro y fuera de la Unidad Educativa, educación, buena formación en valores, ética y cortesía.</li>
+<li>En las filas, demostrar educación, orden y disciplina. En la formación del lunes se debe entonar con civismo los himnos y escuchar en silencio y con respeto las participaciones culturales.</li>
+<li>Mostrar buen comportamiento en todos los actos cívicos, desfiles, actos culturales, ferias educativas, exposición de productos, actos deportivos y otros.</li>
+<li>En el aula, los pasillos y las áreas comunes, ser respetuoso, cortés y educado; evitar dañar la infraestructura, gritar y decir palabras soeces; respetar a los compañeros, a las maestras y maestros y al personal administrativo.</li>
+</ul></div></details>
+
+<details><summary>6. Prohibiciones para el estudiante</summary><div class="in">
+<h4>Dispositivos electrónicos</h4>
+<p>El estudiante <b>no debe</b> portar en la mochila teléfonos celulares, tablets, celulares de alta gama, laptops, audífonos, auriculares, cigarrillos electrónicos y otros. Si es sorprendido usando el celular en el aula para fines no educativos (juegos, páginas prohibidas u otros nocivos), se decomisa y se entrega a la madre, padre o apoderado con la firma de un compromiso. En caso de reincidencia, el decomiso dura hasta finalizar la gestión educativa y el estudiante es derivado a la instancia que corresponda.</p>
+<h4>Acciones de violencia</h4>
+<ul>
+<li>No traer juegos peligrosos que puedan dañar la integridad física (pelotas, bates y otros que sean un riesgo en la cancha, los pasillos y las aulas).</li>
+<li>No causar daño físico, solo o en grupo: pellizcos, rasguños, mordeduras, empujones, jalones, golpes de puño, patadas y otros.</li>
+<li>No causar daño psicológico: insultos, gritos, sobrenombres, burlas, amenazas por cualquier razón.</li>
+<li>Queda prohibido verter opiniones denigrantes, humillantes y discriminatorias que constituyan racismo o discriminación.</li>
+<li>Queda prohibido participar en actos de indisciplina, solo o en grupo: salir de clases sin autorización, abandonar el Colegio sin autorización en horario de clases u otros actos de indisciplina de cualquier naturaleza.</li>
+<li>Queda totalmente prohibido apropiarse de objetos ajenos o sustraerlos. Si se encuentran objetos (billeteras, audífonos, celulares u otros) se deben entregar a los señores regentes.</li>
+</ul></div></details>
+
+<details><summary>7. Incumplimiento y sanciones</summary><div class="in">
+<p>Si el estudiante incumple los deberes y las prohibiciones, se notifica a su madre o padre. El estudiante es derivado al Departamento de Trabajo Social para el estudio social y el informe del caso. Después es derivado a la instancia que corresponda, según las normas y protocolos vigentes y el Reglamento Disciplinario Interno, para adecuar su conducta.</p></div></details>
+
+<p class="part">Deberes de madres, padres o tutores</p>
+
+<details><summary>1. Seguimiento y acompañamiento</summary><div class="in">
+<p>Las madres y padres son actores educativos y deben asumir la responsabilidad de hacer el seguimiento y acompañamiento al proceso educativo de sus hijos, con apoyo y seguimiento, desde el inicio hasta la culminación de la gestión educativa.</p></div></details>
+
+<details><summary>2. Solicitar información pedagógica</summary><div class="in">
+<p>Deben solicitar información sobre el desarrollo educativo, el cumplimiento y el comportamiento de sus hijos en los trimestres, a maestras y maestros de las áreas de saberes, a Dirección y al Departamento de Trabajo Social.</p></div></details>
+
+<details><summary>3. Cuaderno de seguimiento pedagógico</summary><div class="in">
+<p>En el cuaderno de seguimiento de cada curso, los maestros registran las acciones de indisciplina y el incumplimiento de los deberes educativos. Se notifica a las madres y padres de los estudiantes con registros, para su conocimiento y firma, y para que apoyen a sus hijos a cumplir con responsabilidad.</p></div></details>
+
+<details><summary>4. Permisos y licencias</summary><div class="in"><ul>
+<li>Deben presentarse <b>personalmente</b> para solicitar permiso o licencia para sus hijos por motivos de salud, familiares u otra causa de fuerza mayor que impida su asistencia.</li>
+<li>Si hay ausencia de más de dos días, deben presentar en Secretaría la documentación que la justifique, para que sea derivada a Trabajo Social y a la CTP, y se repongan las actividades o evaluaciones.</li>
+</ul></div></details>
+
+<details><summary>5. Participación</summary><div class="in">
+<p>Deben participar activamente en reuniones de organización, reuniones informativas, evaluaciones comunitarias, entrevistas convocadas por asesores, maestros y Trabajo Social, ferias educativas, actos de aniversario y otros que requieran su presencia y apoyo.</p></div></details>
+
+<details><summary>6. Participación social</summary><div class="in">
+<p>Deben participar de forma solidaria y organizada, representando a madres y padres en organizaciones sociales como las directivas de curso, y en actividades de organización y coordinación donde se requiera su presencia.</p></div></details>
+
+<details><summary>7. Prohibiciones</summary><div class="in"><ul>
+<li>Según la RM 001/25, Art. 116, Párrafo II, las madres y padres <b>no deben</b> ingresar en horario de clases al interior de la Unidad Educativa, salvo autorización expresa o notificación a entrevistas urgentes por Dirección, maestros o Trabajo Social.</li>
+<li>Para fortalecer la responsabilidad y la puntualidad, no deben traer en horario de clases los materiales educativos que sus hijos hayan olvidado.</li>
+</ul></div></details>
+
+</div></details></section>
+<section><h2>1. Una tarde en mi aula</h2><p class="sub">Vive una tarde en el colegio, desde las 1:30 hasta las 5:50 p. m. Cada decisión cambia el aula: mira los pupitres y los medidores.</p>
+<div id="room" class="room"></div><div id="meters"></div><div id="sim"></div></section>
+<section><h2>2. Efecto dominó</h2><p class="sub">Elige una acción pequeña y mira hasta dónde llega.</p>
+<div class="pick" id="pick"></div><div id="chain" class="chain"></div></section>
+<section><h2>3. Mi registro de acciones</h2><p class="sub">Puedes volver a registrar cada norma <b>cada 24 horas</b>: puntualidad, tareas, uso del celular, respeto y cuidado de bienes. Elige con honestidad cómo te fue.</p>
+<p class="lock" id="lk3"></p><div id="reg"></div><p id="regt" class="sub"></p><button id="rst">Borrar mi registro</button></section>
+<section><h2>4. Mi reto de 21 días</h2><p class="sub">Elige un reto y marca cada día que lo cumplas. Solo puedes hacer <b>1 registro por día</b>.</p>
+<p class="lock" id="lk4"></p>
+<select id="reto" aria-label="Elige tu reto"><option value="">Elige tu reto</option><option>Llegar a tiempo todos los días</option><option>Entregar todas mis tareas a tiempo</option><option>Usar el celular solo cuando el docente lo permite</option><option>Tratar con respeto a todos mis compañeros</option><option>Cuidar el mobiliario y mi uniforme</option></select>
+<div class="days" id="days"></div><div class="bar"><i id="pb"></i></div><p id="pt" class="sub"></p></section>
+<section id="acta"><h2>5. Mi acta de compromiso</h2><p class="sub">Después de leer el reglamento, elige con sinceridad los compromisos que asumes. Cuando marques los 8, podrás firmar tu acta dibujando tu firma.</p>
+<p class="lock" id="lk5"></p>
+<div class="acl" id="ac1"></div><div class="bar"><i id="acb"></i></div><p class="sub" id="act"></p>
+<div class="sgp" id="acf" hidden><p class="sub" style="margin:0 0 .5rem">Dibuja tu firma con el dedo o el mouse:</p><canvas id="acc" width="600" height="180" aria-label="Espacio para dibujar tu firma"></canvas><div class="row"><button class="go" id="aco" disabled>Firmar mi acta</button><button id="acr">Borrar</button></div></div>
+<div id="acd"></div></section>
+</main>
+<div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+<footer><div class="wrap">Proyecto escolar de la U.E.T.H. José Alonso de Ibáñez “B”, Potosí. Son simulaciones de reflexión: tus datos se guardan solo en este dispositivo.</div></footer>
+<script>
+var KEY="cumplo-v2",S={n:"",sd:0,dm:{},rg:[[0,0],[0,0],[0,0],[0,0],[0,0]],g:"",d:[],c:""};
+try{var r=localStorage.getItem(KEY);if(r)S=Object.assign(S,JSON.parse(r))}catch(e){}
+if(!S.d||S.d.length!==21)S.d=Array(21).fill(0);
+S.pl=S.pl||{};
+function hoy(){var d=new Date();return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate()}
+function sum(a){return a.reduce(function(x,y){return x+y},0)}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}bd()}
+var $=function(i){return document.getElementById(i)};
+function toast(t,ms){var d=document.createElement("div");d.className="toast";d.textContent="★ "+t;d.onclick=function(){d.remove()};$("toasts").appendChild(d);setTimeout(function(){d.remove()},ms||7000)}
+function bd(){var rt=S.rg.reduce(function(a,p){return a+p[0]+p[1]},0),ds=sum(S.d),dm=Object.keys(S.dm).length,tp=S.top||0;
+var L=[["Viví mi tarde",!!S.sd,"Actividad 1: toma las 6 decisiones de la tarde, hasta que termine la jornada.","Terminaste una tarde completa en el aula. Cada decisión cambia el ambiente del curso."],
+["Vi el efecto dominó",dm>=2,"Actividad 2: mira la cadena de consecuencias de al menos 2 acciones distintas (llevas "+Math.min(dm,2)+" de 2).","Ya viste cómo una acción pequeña llega muy lejos."],
+["Llevo registro",rt>=15,"Actividad 3: registra tus normas 15 veces en total (llevas "+Math.min(rt,15)+" de 15).","Llevas 15 registros: observarte cada día es el primer paso para mejorar."],
+["Constante (7 días)",ds>=7,"Actividad 4: marca 7 días cumplidos de tu reto, 1 registro por día (llevas "+Math.min(ds,7)+" de 7).","Siete días cumplidos. La constancia se construye día a día."],
+["Compañero ejemplar",tp>=5,"Actividad 1: toma al menos 5 de las 6 decisiones que cuidan al curso (tu mejor resultado: "+tp+" de 6).","Tus decisiones cuidan al curso. ¡Gracias por ser un buen compañero!"],
+["Acta firmada",!!S.ac,"Actividad 5: lee el reglamento, acepta tus 8 compromisos y firma tu acta.","Firmaste tu acta de compromiso. Cumplir porque comprendes empieza por tus propias palabras."]];
+var first=!S.bg,ch=0;S.bg=S.bg||{};
+L.forEach(function(x){if(x[1]&&!S.bg[x[0]]){S.bg[x[0]]=1;ch=1;if(!first)toast("¡Insignia conseguida: "+x[0]+"! "+x[3])}});
+var all=L.every(function(x){return x[1]});
+if(all&&!S.bgAll){S.bgAll=1;ch=1;if(!first)setTimeout(function(){toast("🏆 ¡Lo lograste"+(S.n?", "+S.n:"")+"! Conseguiste las 6 insignias y eso demuestra que cumples porque comprendes. Tu constancia ya hace mejor a tu curso: sigue adelante, ¡tú marcas la diferencia!",12000)},1500)}
+if(ch){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+$("fin").hidden=!all;$("fin").textContent="🏆 ¡Lo lograste"+(S.n?", "+S.n:"")+"! Las "+L.length+" insignias son tuyas. Tu esfuerzo hace mejor a tu curso: ¡sigue así!";
+$("badges").innerHTML=L.map(function(x){return '<div class="bi"><span class="b'+(x[1]?' on':'')+'">'+(x[1]?'★ ':'')+x[0]+'</span><small>'+x[2]+'</small></div>'}).join("");
+$("hola").textContent=S.n?"Hola, "+S.n+". Llevas "+L.filter(function(x){return x[1]}).length+" de "+L.length+" insignias.":""}
+$("nombre").value=S.n;$("nombre").oninput=function(){S.n=this.value.trim();save()};
+/* 1 simulador */
+var T=[["1:30 p. m. · Suena el timbre de ingreso",["Me quedo afuera con mis amigos un ratito más",[-8,-4,-3],"Entraste tarde al colegio"],["Entro de inmediato a mi aula",[8,3,4],"Entraste a tiempo al colegio"]],
+["1:50 p. m. · El docente ya empezó la clase",["Empiezo a jugar y hacer ruido",[-10,-6,-5],"Hiciste ruido y molestaste a un compañero"],["Atiendo en silencio",[6,6,5],"Atendiste en silencio y entendiste el tema"]],
+["3:35 p. m. · Clase. Vibra tu celular",["Reviso los mensajes",[-12,-3,-4],"Usaste el celular en clase"],["Lo dejo guardado",[8,2,4],"Guardaste el celular"]],
+["4:30 p. m. · Terminó el recreo",["Vuelvo diez minutos después",[-10,-5,-6],"Volviste tarde del recreo"],["Vuelvo con el timbre",[6,3,3],"Volviste con el timbre"]],
+["5:00 p. m. · Un compañero no entiende",["Me río de él",[-4,-12,-8],"Te reíste de un compañero"],["Le explico con calma",[5,10,8],"Le explicaste a un compañero"]],
+["5:35 p. m. · Faltan 15 minutos para la salida y hay una mesa rayada",["Me voy; no es mi problema",[0,-8,-3],"Ignoraste la mesa rayada"],["Propongo limpiarla juntos",[2,10,6],"Propusiste limpiar la mesa"]]];
+var M,step,log;
+function cl(v){return Math.max(0,Math.min(100,v))}
+function drawRoom(){var on=Math.round(M[0]/100*12),h="";for(var i=0;i<12;i++)h+='<div class="desk'+(i<on?' on':'')+'">'+(i<on?'🙂':'😶')+'</div>';$("room").innerHTML=h;
+var N=["Aprendizaje","Confianza","Ambiente"];$("meters").innerHTML=N.map(function(n,i){return '<div class="m"><span>'+n+'</span><div class="bar"><i style="width:'+M[i]+'%"></i></div><b>'+M[i]+'</b></div>'}).join("")}
+function drawSim(){var s=$("sim");
+if(step>=T.length){var ok=log.filter(function(x){return x[1]}).length;s.innerHTML='<div class="scene"><b>Terminó la tarde (5:50 p. m.)</b>Tomaste '+ok+' de 6 decisiones que cuidan al curso. '+(ok>=5?"Tu aula terminó llena de pupitres atentos y ganaste la insignia Compañero ejemplar.":ok>=3?"Hay avances. Mira qué decisiones bajaron el aprendizaje y prueba otra forma.":"El aula quedó con pocos pupitres atentos. Repite la mañana y cambia una decisión.")+'</div><ul class="log">'+log.map(function(x){return '<li class="'+(x[1]?'y':'n')+'">'+(x[1]?'✓ ':'✗ ')+x[0]+'</li>'}).join("")+'</ul><button class="go" id="rep">Repetir la tarde</button>';
+S.sd=1;S.top=Math.max(S.top||0,ok);save();$("rep").onclick=start;return}
+var t=T[step];s.innerHTML='<div class="scene"><b>'+t[0]+'</b>¿Qué haces?</div><div class="two"><button data-k="0">'+t[1][0]+'</button><button data-k="1">'+t[2][0]+'</button></div>';
+[].forEach.call(s.querySelectorAll("button"),function(b){b.onclick=function(){var k=+b.dataset.k,o=T[step][k+1];for(var i=0;i<3;i++)M[i]=cl(M[i]+o[1][i]);log.push([o[2],k]);step++;drawRoom();drawSim()}})}
+function start(){M=[60,60,60];step=0;log=[];drawRoom();drawSim()}
+/* 2 dominó */
+var D=[["Llegar 5 minutos tarde",0,["Entras tarde y el docente se detiene","Cada compañero pierde esos 5 minutos de explicación","Se atrasa el tema y quedan menos minutos para dudas","Mañana habrá más tarea para recuperar","Te acostumbras a llegar tarde y a otros les parece normal"]],
+["Usar el celular en clase",0,["Miras una notificación durante la explicación","Pierdes una parte del tema","Preguntas algo que ya se explicó y el docente repite","Los compañeros atentos esperan y se distraen","El curso aprende menos ese día"]],
+["Ayudar a un compañero",1,["Le explicas con calma lo que no entendía","Él entiende y se anima a participar","El docente puede avanzar sin repetir","El curso gana tiempo de aprendizaje","Más gente se atreve a pedir ayuda"]]];
+var tm=[];
+$("pick").innerHTML=D.map(function(d,i){return '<button data-i="'+i+'" aria-pressed="false">'+d[0]+'</button>'}).join("");
+[].forEach.call($("pick").querySelectorAll("button"),function(b){b.onclick=function(){tm.forEach(clearTimeout);tm=[];var d=D[+b.dataset.i];
+[].forEach.call($("pick").querySelectorAll("button"),function(x){x.setAttribute("aria-pressed",x===b)});
+var c=$("chain");c.className="chain"+(d[1]?" good":"");c.innerHTML=d[2].map(function(t){return "<div>"+t+"</div>"}).join("");
+[].forEach.call(c.children,function(el,j){tm.push(setTimeout(function(){el.className="show"},400+j*900))});
+S.dm[b.dataset.i]=1;save()}});
+/* 3 registro */
+var RN=["Puntualidad","Tareas","Uso del celular","Respeto","Cuidado de bienes"];
+function wait(i){var w=(S.rts[i]||0)+864e5-Date.now();return w>0?w:0}
+function fmt(ms){var h=Math.floor(ms/36e5),m=Math.ceil((ms%36e5)/6e4);if(m===60){h++;m=0}return h?h+" h "+m+" min":m+" min"}
+function drawReg(){var rt=0;S.rts=S.rts||[0,0,0,0,0];S.rl=S.rl||[-1,-1,-1,-1,-1];
+$("reg").innerHTML=RN.map(function(n,i){var a=S.rg[i][0],b=S.rg[i][1],t=a+b,w=wait(i),dis=w>0?" disabled":"",lk=S.rl[i]>=0?S.rl[i]:(t?(a>=b?0:1):-1);if(t)rt++;
+return '<div class="reg"><b>'+n+(t?' · '+a+' ✓ / '+b+' ✗':'')+'</b><button data-i="'+i+'" data-k="0"'+dis+' aria-pressed="'+(lk===0)+'">✓ Cumplí</button><button data-i="'+i+'" data-k="1"'+dis+' aria-pressed="'+(lk===1)+'">✗ Me costó</button><div class="st">'+(w?'<small class="sub">Podrás registrar de nuevo en '+fmt(w)+'.</small>':'')+'<div class="bar"><i style="width:'+(t?a/t*100:0)+'%"></i><u style="width:'+(t?b/t*100:0)+'%"></u></div></div></div>'}).join("");
+[].forEach.call($("reg").querySelectorAll("button"),function(b){b.onclick=function(){var i=+b.dataset.i;if(wait(i)>0)return;S.rg[i][+b.dataset.k]++;S.rts[i]=Date.now();S.rl[i]=+b.dataset.k;save();drawReg()}});
+var A=0,B=0;S.rg.forEach(function(p){A+=p[0];B+=p[1]});$("regt").textContent=A+B?"Cumpliste "+Math.round(A/(A+B)*100)+"% de tus registros ("+A+" de "+(A+B)+"). Observa dónde crece lo rojo: ese es tu próximo reto.":"Todavía no hay registros.";
+$("lk3").textContent="Cada norma se habilita de nuevo 24 horas después de su último registro. "+(rt>=RN.length?"Ya registraste las 5 normas.":"Te faltan "+(RN.length-rt)+" por registrar por primera vez.")}
+$("rst").onclick=function(){S.rg=[[0,0],[0,0],[0,0],[0,0],[0,0]];S.rts=[0,0,0,0,0];S.rl=[-1,-1,-1,-1,-1];save();drawReg()};
+setInterval(drawReg,60000);
+/* 4 y 5 */
+$("reto").value=S.g||"";$("reto").onchange=function(){S.g=this.value;save()};
+function drawD(){$("days").innerHTML=S.d.map(function(v,i){return '<button data-i="'+i+'" aria-pressed="'+(v===1)+'" aria-label="Día '+(i+1)+'"'+(S.l4===hoy()?" disabled":"")+'>'+(i+1)+'</button>'}).join("");
+[].forEach.call($("days").querySelectorAll("button"),function(b){b.onclick=function(){if(S.l4===hoy())return;S.d[+b.dataset.i]=S.d[+b.dataset.i]?0:1;S.l4=hoy();save();drawD()}});
+var t=sum(S.d);$("pb").style.width=(t/21*100)+"%";$("pt").textContent=t+" de 21 días cumplidos"+(t>=21?". ¡Reto completado!":t>=7?". Ya ganaste la insignia de constancia.":"");
+$("lk4").textContent=S.l4===hoy()?"✔ Ya hiciste tu registro de hoy. Vuelve mañana para marcar otro día.":"Tienes 1 registro disponible hoy."}
+/* 5 acta */
+var AC=["Llegar puntual: lunes a las 13:10 y de martes a viernes a las 13:20","Venir con el uniforme completo, aseado y bien presentado","Traer todos mis materiales y preparar mi mochila con anticipación","No llevar celulares ni otros dispositivos electrónicos en la mochila","Respetar a mis compañeros, maestros y personal, sin violencia, burlas ni discriminación","Cuidar la infraestructura y no tomar objetos ajenos; entregar lo que encuentre a los regentes","Cumplir con mis tareas, trabajos y evaluaciones","Comportarme con civismo en las filas, los himnos y los actos cívicos"];
+S.ak=S.ak||[];
+function esc(t){var d=document.createElement("div");d.textContent=t;return d.innerHTML}
+function drawAc(){var k=S.ak,n=k.length,sg=!!S.ac;
+$("ac1").innerHTML=AC.map(function(t,i){var on=k.indexOf(i)>=0;return '<button data-i="'+i+'" aria-pressed="'+on+'"'+(sg||!S.rv?" disabled":"")+'>'+(on?"✓ ":"")+t+'</button>'}).join("");
+[].forEach.call($("ac1").querySelectorAll("button"),function(b){b.onclick=function(){if(S.ac||!S.rv)return;var i=+b.dataset.i,j=S.ak.indexOf(i);if(j>=0)S.ak.splice(j,1);else S.ak.push(i);save();drawAc()}});
+$("acb").style.width=(n/AC.length*100)+"%";
+$("act").textContent=sg?"Aceptaste los "+AC.length+" compromisos.":n+" de "+AC.length+" compromisos aceptados."+(n<AC.length?" Marca todos para poder firmar.":" Ya puedes firmar.");
+var was=!$("acf").hidden;$("lk5").hidden=!!S.rv;$("lk5").textContent="🔒 Actividad bloqueada: abre el texto desplegable «Reglamento» al inicio de la página para desbloquearla.";$("acf").hidden=sg||!S.rv||n<AC.length;if(!$("acf").hidden&&!was)acReset();
+$("acd").innerHTML=sg?'<div class="poster"><h3>Acta firmada ✍️</h3><p id="fr">Firmado: '+esc(S.n||"Estudiante")+' · '+esc(S.acd||"")+'</p>'+(S.acs?'<img class="sig" alt="Mi firma" src="'+S.acs+'">':"")+'<p>Me comprometo a cumplir y a hacer que se cumpla lo establecido en el acta.</p><button id="acx">Quitar mi firma</button></div>':"";
+if(sg)$("acx").onclick=function(){S.ac=0;save();drawAc()}}
+var ac_c=$("acc"),ax=ac_c.getContext("2d"),adr=0,aink=0;
+function acReset(){ax.fillStyle="#fff";ax.fillRect(0,0,ac_c.width,ac_c.height);ax.strokeStyle="#0f2e17";ax.lineWidth=3;ax.lineCap="round";ax.lineJoin="round";aink=0;$("aco").disabled=true}
+function acPt(e){var r=ac_c.getBoundingClientRect();return[(e.clientX-r.left)*ac_c.width/r.width,(e.clientY-r.top)*ac_c.height/r.height]}
+ac_c.onpointerdown=function(e){e.preventDefault();ac_c.setPointerCapture(e.pointerId);adr=1;var p=acPt(e);ax.beginPath();ax.moveTo(p[0],p[1]);ax.lineTo(p[0]+.1,p[1]+.1);ax.stroke();aink=1;$("aco").disabled=false};
+ac_c.onpointermove=function(e){if(!adr)return;var p=acPt(e);ax.lineTo(p[0],p[1]);ax.stroke()};
+ac_c.onpointerup=ac_c.onpointercancel=function(){adr=0};
+$("acr").onclick=acReset;
+$("aco").onclick=function(){if(!aink||!S.rv||S.ak.length<AC.length)return;S.acs=ac_c.toDataURL("image/png");S.ac=1;S.acd=new Date().toLocaleDateString("es-BO");save();drawAc()};
+acReset();
+start();drawReg();drawD();drawAc();bd();
+document.querySelector("#reglamento details").addEventListener("toggle",function(){if(this.open&&!S.rv){S.rv=1;save();drawAc();toast("Actividad 5 desbloqueada. Ya puedes aceptar tus compromisos.",5000)}});
+document.querySelector(".rlink").onclick=function(){document.querySelector("#reglamento details").open=true};
+</script>
+</body>
+</html>
